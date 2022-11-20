@@ -1,0 +1,20 @@
+{
+    "name": "bubble-plugin-unit-test-starter",
+    "version": "1.0.0",
+    "description": "Simple starter project for writing unit tests around Bubble client side plugins",
+    "scripts": {
+      "test": "jest"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/TomJumpStart/BubblePluginUnitTestStarter.git"
+    },
+    "keywords": [],
+    "author": "(c) Tom Godber, Jumpstart.Tech",
+    "devDependencies": {
+      "@babel/preset-env": "^7.20.2",
+      "jest": "^29.3.1",
+      "jest-environment-jsdom": "^29.3.1"
+    }
+  }
+  
