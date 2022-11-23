@@ -2,17 +2,14 @@
  * @jest-environment jsdom
  */
 
-import * as bubble from '../lib/bubblePluginEnvironment.js';
-import * as init from '../src/initialize.js';
-import * as underTest from '../src/update.js';
+import * as bubble from '../../lib/bubblePluginEnvironment.js';
+import * as underTest from '../../src/elementName/initialize.js';
  
  
-describe("Tests for plugin update() function", () => {
+describe("Tests for plugin initialize() function", () => {
  
     beforeEach(() => {
         bubble.reset();
-        // initalize will always have been run before update
-        init.initialize(bubble.instance(), bubble.context());
 
         // TODO any other standard setup you want to do to have a clean start for each test
     });
@@ -21,15 +18,14 @@ describe("Tests for plugin update() function", () => {
     test('My test description', () => {
         // GIVEN starting point
         const instance = bubble.instance(); // this is a mock, which we can then interrogate
-        const properties = { };
         //  - TODO add whatever other setup you want here
  
         // WHEN we run initialize
-        underTest.update(instance, properties, bubble.context());
+        underTest.initialize(instance, bubble.context());
  
         // THEN something happened
         //  - in this example, we confirm that the custom state 'ready' has been set to true (Yes) by the initialize function
-        expect(instance.publishState).toBeCalledWith('update', 123);
+        expect(instance.publishState).toBeCalledWith('ready', true);
         //  - TODO and whatever other checks you want to add
      });
 
